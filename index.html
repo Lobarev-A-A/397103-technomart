@@ -11,8 +11,13 @@
         <div class="header-user-nav">
             <div class="header-user-nav-inner-left">
                 <a class="main-logo">Техномарт</a>
-                <!-- Заменю на форму -->
-                <span class="header-search-form">Поиск:</span>
+
+                <form action="https://echo.htmlacademy.ru" class="header-search-form" method="post">
+                    <p>
+                        <label for="search" class="visually-hidden">Поиск</label>
+                        <input name="header-search" type="search" id="search" placeholder="Поиск:">
+                    </p>
+                </form>
             </div>
 
             <div class="header-user-nav-inner-right">
@@ -26,6 +31,7 @@
             <p class="header-announcement">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</p>
 
             <section class="header-contacts">
+                <span class="visually-hidden">Контакты</span>
                 <span class="header-contact-number">+7 (812) 555-05-55</span>
                 <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </section>
@@ -57,27 +63,27 @@
 
             <div class="materials">
                 <h3>Материалы</h3>
-                <span>На любой вкус</span>
+                <a href="#">На любой вкус</a>
             </div>
 
             <div class="tool">
                 <h3>Инструмент</h3>
-                <span>На все случаи</span>
+                <a href="#">На все случаи</a>
             </div>
 
             <div class="technique">
                 <h3>Техника</h3>
-                <span>Для стройки</span>
+                <a href="#">Для стройки</a>
             </div>
 
             <div class="assortment-and-discounts-slider">
-                <div class="assortment-slide hammer-drill-slide">
+                <div class="assortment-slide hammer-drill-slide" style="background: url(img/slide-1.jpg);">
                     <h3>Перфораторы</h3>
                     <span>Настоящие мужские игрушки</span>
                     <a href="#" class="red-button">Открыть каталог</a>
                 </div>
 
-                <div class="assortment-slide drill-slide">
+                <div class="assortment-slide drill-slide" style="background: url(img/slide-2.jpg);">
                     <h3>Дрели</h3>
                     <span>Соседям на радость!</span>
                     <a href="#" class="red-button">Открыть каталог</a>
@@ -86,12 +92,14 @@
 
             <div class="discounts">
                 <h3>Скидки 50%</h3>
-                <span>На 350 товаров</span>
+                <a href="#">На 350 товаров</a>
+                <img src="img/icon-4.svg" alt="" width="59" height="72">
             </div>
 
             <div class="delivery">
                 <h3>Доставка</h3>
-                <span>Бесплатно</span>
+                <a href="#">Бесплатно</a>
+                <img src="img/icon-5.svg" alt="" width="78" height="63">
             </div>
         </section>
 
@@ -201,7 +209,7 @@
 
                 <p>Вы можете забрать товар сами, заехав в наш офис:</p>
 
-                <img src="img/map.png" alt="map" width="300" height="158">
+                <img src="img/map.png" alt="Карта" width="300" height="158">
 
                 <button type="button" class="red-button">Заблудились? Напишите нам!</button>
             </div>
@@ -224,7 +232,9 @@
         </div>
 
         <div class="footer-moddle-wrapper">
-            <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</p>
+            <p class="footer-contacts">
+                <span class="visually-hidden">Контакты</span> г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55
+            </p>
 
             <ul class="footer-assortment-nav">
                 <li><a href="#">Материалы</a></li>
@@ -235,7 +245,9 @@
         </div>
 
         <div class="footer-copyright-and-social">
-            <p class="footer-copyright">© 2010–2017 Компания «Техномарт» Все права защищены</p>
+            <p class="footer-copyright">
+                <span class="visually-hidden">Авторские права</span> © 2010–2017 Компания «Техномарт» Все права защищены
+            </p>
 
             <ul class="footer-social-list">
                 <li><a href="#">Вконтакте</a></li>
@@ -250,19 +262,34 @@
 
     <section class="modal modal-write-us">
         <h2 class="visually-hidden">Напишите нам</h2>
-        <span class="modal-write-us-close">x</span>
-        <p class="form-name">Ваше имя:</p>
-        <!-- Тут будет форма для ввода имени -->
-        <p class="form-email">Ваш e-mail:</p>
-        <!-- Тут будет форма для ввода e-mail -->
-        <p class="form-text">Текст письма:</p>
-        <!-- Тут будет форма для ввода текста письма -->
-        <button type="submit" class="red-button">Отправить</button>
+
+        <button type="button" class="modal-write-us-close">Закрыть</button>
+
+        <form action="https://echo.htmlacademy.ru" class="write-us-form" method="post">
+            <p>
+                <label for="write-us-name">Ваше имя:</label>
+                <input type="text" id="write-us-name" name="write-us-name" placeholder="Представьтесь, пожалуйста">
+            </p>
+
+            <p>
+                <label for="write-us-email">Ваш e-mail:</label>
+                <input type="email" id="write-us-email" name="write-us-email" placeholder="Для отправки ответа">
+            </p>
+
+            <p>
+                <label for="write-us-mail">Текст письма:</label>
+                <textarea name="write-us-mail" id="write-us-mail" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+            </p>
+
+            <button type="submit">Отправить</button>
+        </form>
     </section>
 
     <section class="modal modal-map">
         <h2 class="visually-hidden">Как нас найти</h2>
-        <span class="modal-map-close">x</span>
+
+        <button type="button" class="modal-map-close">Закрыть</button>
+
         <img src="img/big-map.png" alt="Как нас найти" width="940" height="446">
     </section>
 </body>
